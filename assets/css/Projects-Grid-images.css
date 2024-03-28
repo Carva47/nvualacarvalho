@@ -1,8 +1,0 @@
-.fit-cover {
-  object-fit: cover;
-}
-
-header{
-  background:url(/assets/img/index.jpg) center / cover ,no-repeat, rgb(255,255,255); height:935px;width:100%; padding: 0;padding-top: 364px;font-size: 10px;opacity: 1;filter: blur(0px) brightness(104%) contrast(115%);overflow: visible;transition: ease;--bs-body-bg: rgba(255,255,255,0);transform: translate(0px) scale(1) skew(0deg);
-
-}
