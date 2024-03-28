@@ -72,7 +72,7 @@ header nav ul{
 
 header nav.menu-desktop ul li{
     display: inline;
-    padding: 0 40px;
+    padding: 0 25px;
     text-decoration: none;
 }
 
@@ -536,6 +536,27 @@ footer .line-footer p a:hover{
     font-size: 25px;
     margin-top: 15px;
 }
+  
+/*btn topo */
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+  }
+  
+  #myBtn:hover {
+    background-color: #000000;
+  }
   
 /* RESPONSIVO */
 @media screen and (max-width: 1020px){

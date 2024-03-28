@@ -16,3 +16,23 @@ overlay.addEventListener('click', ()=>{
 btnFechar.addEventListener('click', ()=>{
     menu.classList.remove('abrir-menu')
 })
+
+
+/* Botao de voltar para o topo*/ 
+
+// Quando o usuário rolar 20px da parte superior da página, exibir o botão
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// Quando o usuário clicar no botão, rolar de volta ao topo da página
+function topFunction() {
+  document.body.scrollTop = 0; // Para navegadores Safari
+  document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE e Opera
+}
