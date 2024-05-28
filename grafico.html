@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráficos com Chart.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        canvas {
+            max-width: 600px;
+            max-height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Gráfico de Linhas</h2>
+        <canvas id="lineChart"></canvas>
+    </div>
+    <div>
+        <h2>Gráfico de Barras</h2>
+        <canvas id="barChart"></canvas>
+    </div>
+
+    <script>
+        // Dados e configuração do gráfico de linhas
+        const lineChartData = {
+            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho'],
+            datasets: [{
+                label: 'Vendas',
+                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                borderColor: 'rgba(75, 192, 192, 1)',
+                data: [65, 59, 80, 81, 56, 55, 40],
+            }]
+        };
+
+        const lineChartConfig = {
+            type: 'line',
+            data: lineChartData,
+            options: {}
+        };
+
+        // Dados e configuração do gráfico de barras
+        const barChartData = {
+            labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho'],
+            datasets: [{
+                label: 'Receita',
+                backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                borderColor: 'rgba(153, 102, 255, 1)',
+                data: [50, 60, 70, 80, 90, 100, 110],
+            }]
+        };
+
+        const barChartConfig = {
+            type: 'bar',
+            data: barChartData,
+            options: {}
+        };
+
+        // Inicializa os gráficos
+        window.onload = function() {
+            const lineCtx = document.getElementById('lineChart').getContext('2d');
+            new Chart(lineCtx, lineChartConfig);
+
+            const barCtx = document.getElementById('barChart').getContext('2d');
+            new Chart(barCtx, barChartConfig);
+        };
+    </script>
+</body>
+</html>
